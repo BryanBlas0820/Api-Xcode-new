@@ -32,6 +32,11 @@ public class TareaController {
     public Tarea obtenerTareaPorId(@PathVariable Long id) {
         return _service.obtenerTarea(id);
     }
+
+    @GetMapping("/xUser/{id}")
+    public Tarea obtenerTareasPorUsuario(@PathVariable Long id) {
+        return _service.listarTareasPorUsuario(id);
+    }
     
     @PostMapping("/registrar")
     public Tarea crearTarea(@RequestBody Tarea tarea) {
