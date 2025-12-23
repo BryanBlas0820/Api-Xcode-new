@@ -12,5 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Bryyann
  */
 public interface ITareaRepository extends JpaRepository<Tarea, Long>{
-    
+
+    List<Tarea> findByUsuarioId(Long usuarioId);
 }
