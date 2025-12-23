@@ -19,6 +19,6 @@ public interface IUsuarioService {
     Usuario editarUsuario(Long id, Usuario usuario);
     boolean eliminarUsuario(Long id);
     
-    boolean validarUsuario(String username, String password);
+    Long validarUsuario(String username, String password);
     
 }   
