@@ -19,6 +19,6 @@ public interface ITareaService {
     Tarea editarTarea(Long id, Tarea tarea);
     boolean eliminarTarea(Long id);
     boolean TareaSemanaCompletada(Long id);
-    List<Tarea> listarTareaPorUsuario(Long usuarioId);
+    List<Tarea> listarTareasPorUsuario(Long usuarioId);
     
 }
