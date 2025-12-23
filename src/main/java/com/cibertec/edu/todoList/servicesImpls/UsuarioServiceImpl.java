@@ -55,19 +55,19 @@ public class UsuarioServiceImpl implements IUsuarioService {
     }
 
     @Override
-    public boolean validarUsuario(String user, String password) {
+    public Long validarUsuario(String user, String password) {
         Usuario usuario = _repository.findByUsuario(user).orElse(null);
         
         if (usuario == null) {
-            return false;
+            return null;
         }
 
         // Validación simple (SIN ENCRIPTAR)
         if (!usuario.getPassword().equals(password)) {
-            return false;
+            return null;
         }
         
-        return true;
+        return usuario.getId();
     }
     
 }
