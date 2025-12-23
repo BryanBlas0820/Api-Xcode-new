@@ -34,7 +34,7 @@ public class TareaController {
     }
 
     @GetMapping("/xUser/{id}")
-    public Tarea obtenerTareasPorUsuario(@PathVariable Long id) {
+    public List<Tarea> listarTareasPorUsuario(@PathVariable Long id) {
         return _service.listarTareasPorUsuario(id);
     }
     
