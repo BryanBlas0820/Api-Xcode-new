@@ -60,4 +60,9 @@ public class TareaServiceImpl implements ITareaService {
             return true;
         }).orElse(false);
     }
+
+    @Override
+    public List<Tarea> listarTareasPorUsuario(Long usuarioId) {
+        return _repository.findByUsuarioId(usuarioId);    
+    }
 }
