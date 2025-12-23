@@ -5,6 +5,7 @@
 package com.cibertec.edu.todoList.repositories;
 
 import com.cibertec.edu.todoList.models.Tarea;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
