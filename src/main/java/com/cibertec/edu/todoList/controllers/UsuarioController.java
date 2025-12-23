@@ -49,7 +49,7 @@ public class UsuarioController {
     }
     
     @PostMapping("/login")
-    public Boolean validarUsuarioLogin(@RequestBody Usuario usuario) {
+    public Long validarUsuarioLogin(@RequestBody Usuario usuario) {
         return _service.validarUsuario(usuario.getUsuario(), usuario.getPassword());
     }
 }
